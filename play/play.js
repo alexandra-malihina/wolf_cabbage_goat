@@ -1,43 +1,27 @@
 class Play{
     constructor(){
         console.log('play');
-        var inst=this;
+        this.ajax_play_actions({action:"get_data"}, "GET");
+    }
+    session_destroy(){
+        this.ajax_play_actions({action:"session_destroy"},"GET");
+    }
+    ajax_play_actions(data, method){
+        let inst=this;
         $.ajax({
-            url:"./play/play.php",
-            method:"GET",
+            url:"./play/actions.php",
+            method:method,
             dataType:"JSON",
+            data:data,
             success:function(data){
                 console.log(data);
-                if(data)
-                    inst.set_data(data);
+                inst.data=data;
+                console.log(inst.data)
 
             }
         });
     }
-    get_objects(){
-
-    }
-    set_objects(){
-
-    }
-    set_data(data){
-        this.data=data;
-        console.log(this);
-    }
-    session_destroy(){
-        ajax_play_actions({action:"session_destroy"},"GET");
-    }
-
 
 }
-function ajax_play_actions(data, method){
-    $.ajax({
-        url:"./play/actions.php",
-        method:method,
-        data:data,
-        success:function(data){
-            console.log(data);
-        }
-    });
-}
+
 var play = new Play();

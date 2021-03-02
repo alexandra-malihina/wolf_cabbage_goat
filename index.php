@@ -11,6 +11,9 @@
           integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
           crossorigin="anonymous"></script>
         <script type="text/javascript" src="./play/play.js"> </script>
+        <?php
+        include './play/play.php';
+         ?>
         <div id="content" class='flex_row'>
             <div id="left_side" class='w_100 side' >
             </div>
