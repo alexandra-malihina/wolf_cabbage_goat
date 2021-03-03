@@ -6,4 +6,11 @@
     if($_GET['action']=='get_data'){
         $play->get_data();
     }
+    if($_GET['action']=='step'){
+        $play->step($_GET['object_id']);
+    }
+    if($_GET['action']=='restart'){
+        $play->set_default();
+        $play->get_data();
+    }
  ?>

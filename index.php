@@ -14,28 +14,40 @@
         <?php
         include './play/play.php';
          ?>
+         <div id="rules" class="absolute">
+             Нельзя оставлять без присмотра:
+         </div>
+         <div id="modal_message">
+             <div id="modal_body" class="flex_column ">
+                 <div id="modal_img">
+
+                 </div>
+                 <div id="modal_text">
+
+                 </div>
+                 <div id="button_ok" class="pointer">
+                     ok
+                 </div>
+             </div>
+         </div>
         <div id="content" class='flex_row'>
-            <div id="left_side" class='w_100 side' >
+            <div id="ground_left_side" class='w_100 flex_column side' >
             </div>
-            <div id="water" class='w_100'>
+            <div id="water" class='w_100 flex_column side'>
+                <div id="boat" class="right_side">
+
+                </div>
             </div>
-            <div id="right_side" class='w_100 flex_column side' >
-                <div class="object pointer">
-                    cabbage
-                </div>
-                <div class="object pointer">
-                    goat
-                </div>
-                <div class="object pointer">
-                    wolf
-                </div>
+            <div id="ground_right_side" class='w_100 flex_column side' >
+
             </div>
         </div>
         <div class="absolute flex-column w_100" id="step">
             <div id="set_step" class="pointer">
-                step
+                Переплыть
             </div>
         </div>
+
 
         <script type="text/javascript" src="./play/actions.js"></script>
     </body>
